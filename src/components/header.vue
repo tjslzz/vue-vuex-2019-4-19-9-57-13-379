@@ -1,6 +1,6 @@
 <template>
 <div id="hheader">
-    <h2>{{msg}}</h2>
+    <h2>Vue To Do List</h2>
     <p>
         <em>Simple Todo List with adding and filter by diff status.</em>
     </p>
@@ -9,9 +9,6 @@
 
 <script>
 export default {
-    name: 'hheader',
-    props: {
-        msg: String,
-    }
+    name: 'hheader'
 }
 </script>
