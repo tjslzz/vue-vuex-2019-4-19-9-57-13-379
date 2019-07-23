@@ -11,11 +11,6 @@ export default {
     props: {
         item: Object
     },
-    data: () => {
-        return {
-            edit: false
-        }
-    },
     methods: {
         editable() {
             this.$refs.info.setAttribute("contenteditable", "true");
