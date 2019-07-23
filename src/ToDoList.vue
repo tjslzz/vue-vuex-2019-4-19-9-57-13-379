@@ -4,7 +4,7 @@
     <div id="container">
         <Header msg="Vue To Do List" />
         <Body :model="model"/>
-        <Footer @all="all" @active="active" @complete="complete"/>
+        <Footer @filter_list="filter_list"/>
     </div>
 </div>
 </template>
@@ -17,7 +17,7 @@ export default {
     name: 'app',
     data: () => {
         return {
-            model:"all"
+            model:Function
         }
     },
     components: {
@@ -26,14 +26,8 @@ export default {
         Footer
     },
     methods: {
-        all: function () {
-            this.model = "all";
-        },
-        active: function () {
-            this.model = "active";
-        },
-        complete: function () {
-            this.model = "complete";
+        filter_list: function (func) {
+            this.model = func;
         }
     }
 }

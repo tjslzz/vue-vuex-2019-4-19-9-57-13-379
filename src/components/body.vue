@@ -12,8 +12,7 @@ export default {
     name: 'bbody',
     props: {
         model: {
-            type: String,
-            default: () => "all"
+            type: Function
         }
     },
     components: {

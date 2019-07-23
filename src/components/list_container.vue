@@ -17,8 +17,7 @@ export default {
     },
     props: {
         model: {
-            type: String,
-            default: () => "all"
+            type: Function
         }
     },
     components: {
@@ -29,11 +28,7 @@ export default {
     },
     watch: {
         model() {
-            switch(this.model){
-                case "all" : this.list = this.$store.getters.getList();break;
-                case "active" : this.list = this.$store.getters.getList().filter(i => !i.checked);break;
-                case "complete" : this.list = this.$store.getters.getList().filter(i => i.checked);break;
-            }
+            this.list = this.model();
         }
     }
 }
