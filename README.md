@@ -9,6 +9,3 @@
 
 
 提交到服务器
-gittemp
-                mv gittemp/.git .
-                rm -rf gittemp
